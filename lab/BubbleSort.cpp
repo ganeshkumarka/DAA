@@ -24,12 +24,24 @@ void BubbleSort(int arr[], int n)
         }
     }
 }
-int main()
-{
-    int arr[5]={5,4,8,2,4};
-    BubbleSort(arr,5);
-    for(int i=0;i<5;i++){
+void displayArray(int arr[],int n){
+    cout<<"Sorted Array: ";
+    for(int i=0;i<n;i++){
         cout<<arr[i]<<",";
     }
+}
+int main()
+{
+    int n;
+    cout<<"Enter the number of elements: ";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter the elements: ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    
+    BubbleSort(arr,n);
+    displayArray(arr,n);
     
 }
